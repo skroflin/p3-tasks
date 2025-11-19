@@ -8,6 +8,7 @@ export default function SummaryScreen({ userData }) {
                 <>
                     <Text style={styles.title}>Sažetak unosa</Text>
                     <Text style={styles.text}>Ime: {userData.name}</Text>
+                    <Text style={styles.text}>Spol: {userData.gender}</Text>
                     <Text style={styles.text}>Godine: {userData.age}</Text>
                 </>
             ) : (

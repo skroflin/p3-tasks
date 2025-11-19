@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function FormScreen({ setUserData }) {
     const [name, setName] = useState('');
+    const [gender, setGender] = useState('');
     const [age, setAge] = useState('');
 
     const handleSubmit = () => {
-        setUserData({ name, age });
+        setUserData({ name, gender, age });
         setName('');
+        setGender('');
         setAge('');
         alert('Podaci su spremljeni! Prijeđite na Summary tab.');
     };
@@ -15,12 +17,17 @@ export default function FormScreen({ setUserData }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Unos korisničkih podataka</Text>
-
             <TextInput
                 style={styles.input}
                 placeholder="Unesi ime"
                 value={name}
                 onChangeText={setName}
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Unesi spol"
+                value={gender}
+                onChangeText={setGender}
             />
             <TextInput
                 style={styles.input}

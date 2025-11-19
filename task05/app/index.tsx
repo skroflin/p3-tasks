@@ -3,7 +3,7 @@ import { useState } from "react";
 import TabNavigator from "./navigation/TabNavigator";
 
 export default function Index() {
-  const [userData, setUserData] = useState({ name: '', age: '' })
+  const [userData, setUserData] = useState({ name: '', gender: '', age: '' })
 
   return (
     <NavigationIndependentTree>
