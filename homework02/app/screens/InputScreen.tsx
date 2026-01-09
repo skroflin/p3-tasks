@@ -3,8 +3,8 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-nativ
 import { AlbumContext } from "../index";
 import { commonStyle } from "../styles/CommonStyle";
 
-export default function InputScreen({ navigation }) {
-    const { album, setAlbum } = useContext(AlbumContext)
+export default function InputScreen({ navigation }: any) {
+    const { album, setAlbum }: any = useContext(AlbumContext)
 
     const [performerName, setPerformerName] = useState('')
     const [albumName, setAlbumName] = useState('')

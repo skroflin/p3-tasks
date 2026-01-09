@@ -3,8 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { AlbumContext } from "../index";
 import { commonStyle } from "../styles/CommonStyle";
 
-export default function ReadScreen({ navigation }) {
-    const { album } = useContext(AlbumContext)
+export default function ReadScreen({ navigation }: any) {
+    const { album }: any = useContext(AlbumContext)
 
     return (
         <View style={commonStyle.container}>
